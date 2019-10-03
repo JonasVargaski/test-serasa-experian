@@ -41,6 +41,14 @@ export default function Teste() {
             </Col>
           </Row>
         </Bio>
+        <Row>
+          <Col sm="12" md="6">
+            <h1>album</h1>
+          </Col>
+          <Col sm="12" md="6">
+            <h1>Playlist</h1>
+          </Col>
+        </Row>
       </Container>
     </Wrapper>
   );
