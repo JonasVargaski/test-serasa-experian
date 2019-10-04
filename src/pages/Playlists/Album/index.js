@@ -10,7 +10,7 @@ export default function Aalbum() {
   return (
     <Container>
       <Row>
-        <Col xs="12" sm="12" md="5" lg="4">
+        <Col xs="12" sm="6" md="5" lg="4">
           <InfoAlbum>
             <img
               src="https://is1-ssl.mzstatic.com/image/thumb/Features118/v4/5a/6b/a1/5a6ba123-a28a-7f44-99a2-34c4cff9e2d9/source/268x268cc.jpg"
@@ -27,7 +27,7 @@ export default function Aalbum() {
             </p>
           </InfoAlbum>
         </Col>
-        <Col xs="12" sm="12" md="7" lg="8">
+        <Col xs="12" sm="6" md="7" lg="8">
           <Album>
             <h1>Lil Wayne: Next Steps</h1>
             <StyledButton>

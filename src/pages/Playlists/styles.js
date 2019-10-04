@@ -32,6 +32,10 @@ export const Bio = styled.div`
   > div > div + div {
     @media ${sizes.tablet} {
       padding-left: 19px;
+
+      span {
+        color: #3a3939;
+      }
     }
   }
 `;
