@@ -27,12 +27,11 @@ export const Bio = styled.div`
     font-size: 24px;
     line-height: 1.25;
     font-weight: 700;
-    padding-bottom: 5px;
+    margin: 18px 0 9px;
   }
-
-  > div {
-    div {
-      padding: 16px;
+  > div > div + div {
+    @media ${sizes.tablet} {
+      padding-left: 19px;
     }
   }
 `;
@@ -58,7 +57,7 @@ export const About = styled.ul`
 `;
 
 export const StyledButton = styled(Button)`
-  margin: 20px 0 0;
+  margin: 20px 0 17px;
   display: none;
 
   @media ${sizes.phone} {
