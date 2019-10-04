@@ -15,7 +15,7 @@ export const Cover = styled.div`
 export const Container = styled.div`
   margin: 15px auto;
   padding: 0 12px;
-  max-width: 968px;
+  max-width: 1200px;
   width: 100%;
 `;
 
@@ -31,6 +31,7 @@ export const Bio = styled.div`
 
 export const About = styled.ul`
   width: 100%;
+  margin-left: 21px;
 
   > li {
     border-top: 1px solid #ccc;

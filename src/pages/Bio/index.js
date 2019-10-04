@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Row, Col } from '~/components/Grid';
 import { Wrapper, Cover, Container, Bio, About } from './styles';
+import Album from '../Album';
 
 export default function Teste() {
   return (
@@ -41,14 +42,7 @@ export default function Teste() {
             </Col>
           </Row>
         </Bio>
-        <Row>
-          <Col sm="12" md="6">
-            <h1>album</h1>
-          </Col>
-          <Col sm="12" md="6">
-            <h1>Playlist</h1>
-          </Col>
-        </Row>
+        <Album />
       </Container>
     </Wrapper>
   );
