@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import { sizes } from '~/styles/breakpoints';
+
+import Button from '~/components/Button';
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -13,7 +16,7 @@ export const Cover = styled.div`
 `;
 
 export const Container = styled.div`
-  margin: 15px auto;
+  margin: 0 auto;
   padding: 0 12px;
   max-width: 1200px;
   width: 100%;
@@ -24,14 +27,18 @@ export const Bio = styled.div`
     font-size: 24px;
     line-height: 1.25;
     font-weight: 700;
-    letter-spacing: 0.023em;
     padding-bottom: 5px;
+  }
+
+  > div {
+    div {
+      padding: 16px;
+    }
   }
 `;
 
 export const About = styled.ul`
   width: 100%;
-  margin-left: 21px;
 
   > li {
     border-top: 1px solid #ccc;
@@ -40,11 +47,30 @@ export const About = styled.ul`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
     p {
       text-transform: uppercase;
       font-weight: 600;
       font-size: 12px;
       color: #888;
     }
+  }
+`;
+
+export const StyledButton = styled(Button)`
+  margin: 20px 0 0;
+  display: none;
+
+  @media ${sizes.phone} {
+    display: block;
+  }
+
+  span {
+    font-weight: 600;
+    margin-left: 4px;
+  }
+
+  svg {
+    margin-left: 4px;
   }
 `;

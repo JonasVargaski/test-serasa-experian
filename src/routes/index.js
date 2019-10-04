@@ -1,12 +1,13 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
-import Bio from '~/pages/Bio';
+import Playlists from '~/pages/Playlists';
 
 export default function Routes() {
   return (
     <Switch>
-      <Route path="/" component={Bio} />
+      <Route path="/playlists" component={Playlists} />
+      <Redirect to="/playlists" />
     </Switch>
   );
 }

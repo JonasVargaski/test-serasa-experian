@@ -1,8 +1,11 @@
 import React from 'react';
 
+import { MdCallMade } from 'react-icons/md';
+
 import { Row, Col } from '~/components/Grid';
-import { Wrapper, Cover, Container, Bio, About } from './styles';
-import Album from '../Album';
+import { Wrapper, Cover, Container, Bio, About, StyledButton } from './styles';
+import Album from './Album';
+import Artists from './Artists';
 
 export default function Teste() {
   return (
@@ -23,6 +26,10 @@ export default function Teste() {
               installments of the lattermost. Fortunately, Wayne has rewarded
               his fans’ patience with 23 tracks that speak to a number of his
               most storied eras.
+              <StyledButton>
+                View on <span>Apple music</span>
+                <MdCallMade size={13} />
+              </StyledButton>
             </Col>
             <Col xs="12" sm="12" md="6">
               <About>
@@ -42,7 +49,9 @@ export default function Teste() {
             </Col>
           </Row>
         </Bio>
+
         <Album />
+        <Artists />
       </Container>
     </Wrapper>
   );
