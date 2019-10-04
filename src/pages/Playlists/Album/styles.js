@@ -4,22 +4,19 @@ import Button from '~/components/Button';
 
 export const Container = styled.div`
   max-width: 980px;
-  margin: 32px auto;
+  margin: 27px auto;
   width: 100%;
-  > div {
-    div {
-      padding: 14px;
-    }
-  }
 `;
 
 export const InfoAlbum = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 0 16px 22px;
 
   > img {
-    width: 313px;
-    height: 313px;
+    max-width: 313px;
+    max-height: 313px;
+    border-radius: 6px;
   }
 
   > div {
@@ -43,7 +40,7 @@ export const InfoAlbum = styled.div`
 `;
 
 export const Album = styled.div`
-  padding: 15px;
+  padding: 0 12px;
 
   > h1 {
     font-size: 24px;
@@ -53,7 +50,7 @@ export const Album = styled.div`
 `;
 
 export const StyledButton = styled(Button)`
-  margin: 30px 0 20px;
+  margin: 20px 0 20px;
 
   > span {
     font-weight: 600;

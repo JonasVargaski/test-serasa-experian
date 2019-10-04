@@ -9,7 +9,7 @@ export const List = styled.ul`
     color: #8e8e93;
 
     &:hover {
-      background: rgba(0, 0, 0, 0.035);
+      background: rgba(0, 0, 0, 0.065);
     }
 
     img {
@@ -35,7 +35,7 @@ export const List = styled.ul`
         left: 0;
         top: 0;
         z-index: 1;
-        border-top: 1px solid rgba(0, 0, 0, 0.035);
+        border-top: 1px solid rgba(0, 0, 0, 0.065);
       }
 
       > div {

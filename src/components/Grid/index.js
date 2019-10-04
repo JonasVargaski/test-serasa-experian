@@ -33,16 +33,4 @@ export const Row = styled.div`
   width: 100%;
 
   justify-content: ${({ justify }) => justify && justify}};
-
-  > div:first-child {
-    padding-right: 14px;
-  }
-
-  > div + div {
-    padding-right: 14px;
-  }
-
-  > div:last-child {
-    padding-right: 0px;
-  }
 `;
