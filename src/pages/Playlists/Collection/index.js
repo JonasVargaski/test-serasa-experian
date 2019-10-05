@@ -17,13 +17,7 @@ export default function Collection({ collections }) {
               <img src={collection.coverUrl} alt="Album " />
               <div>{collection.trackCount} songs</div>
               <h3>EDITORS’ NOTES</h3>
-              <p>
-                Apart from prison, there isnt much that has slowed down Lil
-                Waynes prolific creative output throughout the ‘00s. Bizarre
-                metaphors, tongue twister raps, and awesomely ridiculous
-                couplets abound in these lesser-heard gems pulled from a
-                neavvdrly bottomless collection of rhymes.
-              </p>
+              <p>{collection.notes}</p>
             </InfoAlbum>
           </Col>
           <Col xs="12" sm="6" md="7" lg="8">
@@ -52,6 +46,12 @@ Collection.propTypes = {
   collections: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
+      coverUrl: PropTypes.string.isRequired,
+      trackCount: PropTypes.number.isRequired,
+      notes: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      viewUrl: PropTypes.string.isRequired,
+      tracks: PropTypes.array.isRequired,
     })
   ).isRequired,
 };

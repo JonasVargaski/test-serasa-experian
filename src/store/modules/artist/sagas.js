@@ -33,6 +33,7 @@ export function* getCollectionRequest({ payload: { artistName } }) {
         coverUrl: collection.artworkUrl100,
         name: collection.collectionCensoredName,
         trackCount: collection.trackCount,
+        notes: collection.copyright,
         tracks: data.data.results.map(track => ({
           id: track.trackId,
           name: track.trackName,
