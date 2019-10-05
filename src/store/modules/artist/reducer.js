@@ -14,6 +14,14 @@ const INITIAL_STATE = {
     genre: 'Rock',
     born: 'Sep, 27 2000',
     collections: [],
+    featuredArtistis: [
+      {
+        imageUrl:
+          'https://cdn-ofuxico.akamaized.net/img/upload/noticias/2017/07/20/maluma-prepara-lancamento-de-disco-em-ingles-1_298811_36.jpg',
+        name: 'Lil Wayne',
+        genre: 'Rock',
+      },
+    ],
   },
 };
 

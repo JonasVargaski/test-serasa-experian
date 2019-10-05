@@ -1,37 +1,32 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Container } from './styles';
 
-export default function FeaturedArtistis() {
+export default function FeaturedArtistis({ artists }) {
   return (
     <Container>
       <h4>Featured Artistis</h4>
-      <div>
-        <div>
-          <img
-            src="https://cdn-ofuxico.akamaized.net/img/upload/noticias/2017/07/20/maluma-prepara-lancamento-de-disco-em-ingles-1_298811_36.jpg"
-            alt="Artist"
-          />
-          <p>John (feat. Rick Ross)</p>
-          <span>lill Wayne</span>
+      {artists.map(artist => (
+        <div key={artist.id}>
+          <div>
+            <img src={artist.imageUrl} alt="Artist" />
+            <p>{artist.name}</p>
+            <span>{artist.genre}</span>
+          </div>
         </div>
-        <div>
-          <img
-            src="https://cdn-ofuxico.akamaized.net/img/upload/noticias/2017/07/20/maluma-prepara-lancamento-de-disco-em-ingles-1_298811_36.jpg"
-            alt="Artist"
-          />
-          <p>John (feat. Rick Ross)</p>
-          <span>lill Wayne</span>
-        </div>
-        <div>
-          <img
-            src="https://cdn-ofuxico.akamaized.net/img/upload/noticias/2017/07/20/maluma-prepara-lancamento-de-disco-em-ingles-1_298811_36.jpg"
-            alt="Artist"
-          />
-          <p>John (feat. Rick Ross)</p>
-          <span>lill Wayne</span>
-        </div>
-      </div>
+      ))}
     </Container>
   );
 }
+
+FeaturedArtistis.propTypes = {
+  artists: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+      imageUrl: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      genre: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};

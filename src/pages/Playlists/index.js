@@ -23,7 +23,7 @@ export default function Artist() {
       <Container>
         <Bio artist={artist} />
         <Collection collections={artist.collections} />
-        <FeaturedArtist />
+        <FeaturedArtist artists={artist.featuredArtistis} />
       </Container>
     </Wrapper>
   );
