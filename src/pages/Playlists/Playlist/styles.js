@@ -45,13 +45,9 @@ export const List = styled.ul`
           font-weight: 400;
           line-height: 1.5em;
         }
-        span {
-          font-size: 12px;
-          font-weight: 400;
-        }
       }
       span {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 400;
       }
     }

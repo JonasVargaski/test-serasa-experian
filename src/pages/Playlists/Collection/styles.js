@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { sizes } from '~/styles/breakpoints';
 
 import Button from '~/components/Button';
 
@@ -19,8 +18,8 @@ export const InfoAlbum = styled.div`
   padding: 0 16px 22px;
 
   > img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 280px;
+    max-height: 280px;
     width: 100%;
     height: 100%;
     border-radius: 6px;
@@ -55,28 +54,6 @@ export const Album = styled.div`
     font-weight: 700;
   }
 `;
-
-export const AlbumMobile = styled.div`
-  padding: 0 12px;
-  border-top: 1px solid #ccc;
-  display: none;
-
-  @media ${sizes.phone} {
-    display: flex;
-  }
-
-  div {
-    margin-right: 16px;
-  }
-
-  > h1 {
-    font-size: 24px;
-    line-height: 1.25;
-    font-weight: 700;
-    color: #333;
-  }
-`;
-
 export const StyledButton = styled(Button)`
   margin: 20px 0 20px;
 

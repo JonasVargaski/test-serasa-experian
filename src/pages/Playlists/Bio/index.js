@@ -11,14 +11,16 @@ export default function Bio({ artist }) {
     <Container>
       <h3>{artist.name}</h3>
       <Row>
-        <Col xs="12" sm="12" md="6">
+        <Col xs="12" sm="7" md="8">
           <span>{artist.about}</span>
-          <StyledButton>
-            View on <span>Apple music</span>
-            <MdCallMade size={13} />
-          </StyledButton>
+          <a href={artist.profileUrl} target="_blank" rel="noopener noreferrer">
+            <StyledButton>
+              View on <span>Apple music</span>
+              <MdCallMade size={13} />
+            </StyledButton>
+          </a>
         </Col>
-        <Col xs="12" sm="12" md="6">
+        <Col xs="12" sm="5" md="4">
           <About>
             <li>
               <p>Origin</p>
@@ -42,6 +44,7 @@ export default function Bio({ artist }) {
 Bio.propTypes = {
   artist: PropTypes.shape({
     name: PropTypes.string.isRequired,
+    profileUrl: PropTypes.string.isRequired,
     about: PropTypes.string.isRequired,
     origin: PropTypes.string.isRequired,
     genre: PropTypes.string.isRequired,

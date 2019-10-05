@@ -5,6 +5,7 @@ const INITIAL_STATE = {
     id: 909253,
     amgId: 468749,
     name: 'Queen',
+    profileUrl: 'https://music.apple.com/artist/queen/3296287',
     coverUrl: `https://www.eventim.com.br/obj/media/BR-eventim/campaign/jbj/img/photo-bonjovi-001.jpg`,
     about: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Beatae aspernatur aperiam nihil fugiat delectus eos molestias,
@@ -16,6 +17,7 @@ const INITIAL_STATE = {
     collections: [],
     featuredArtistis: [
       {
+        id: 151502,
         imageUrl:
           'https://cdn-ofuxico.akamaized.net/img/upload/noticias/2017/07/20/maluma-prepara-lancamento-de-disco-em-ingles-1_298811_36.jpg',
         name: 'Lil Wayne',
