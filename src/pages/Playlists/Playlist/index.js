@@ -1,114 +1,35 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { List } from './styles';
 
-export default function Playlist() {
+export default function Playlist({ tracks }) {
   return (
     <List>
-      <li>
-        <img
-          src="https://s.yimg.com/ny/api/res/1.2/b5tX9UCX8LjiD09LCDfMeA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media.zenfs.com/en-US/rollingstone.com/3dd7ffdb4327a801d1bf8a814feaadc1"
-          alt="Autor"
-        />
-        <div>
+      {tracks.map(track => (
+        <li key={track.id}>
+          <img src={track.coverUrl} alt="Cover" />
           <div>
-            <p>John (feat. Rick Ross)</p>
-            <span>lill Wayne</span>
+            <div>
+              <p>{track.name}</p>
+              <span>{track.artistName}</span>
+            </div>
+            <span>{track.duration}</span>
           </div>
-          <span>4:46</span>
-        </div>
-      </li>
-      <li>
-        <img
-          src="https://s.yimg.com/ny/api/res/1.2/b5tX9UCX8LjiD09LCDfMeA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media.zenfs.com/en-US/rollingstone.com/3dd7ffdb4327a801d1bf8a814feaadc1"
-          alt="Autor"
-        />
-        <div>
-          <div>
-            <p>John (feat. Rick Ross)</p>
-            <span>lill Wayne</span>
-          </div>
-          <span>4:46</span>
-        </div>
-      </li>
-      <li>
-        <img
-          src="https://s.yimg.com/ny/api/res/1.2/b5tX9UCX8LjiD09LCDfMeA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media.zenfs.com/en-US/rollingstone.com/3dd7ffdb4327a801d1bf8a814feaadc1"
-          alt="Autor"
-        />
-        <div>
-          <div>
-            <p>John (feat. Rick Ross)</p>
-            <span>lill Wayne</span>
-          </div>
-          <span>4:46</span>
-        </div>
-      </li>
-      <li>
-        <img
-          src="https://s.yimg.com/ny/api/res/1.2/b5tX9UCX8LjiD09LCDfMeA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media.zenfs.com/en-US/rollingstone.com/3dd7ffdb4327a801d1bf8a814feaadc1"
-          alt="Autor"
-        />
-        <div>
-          <div>
-            <p>John (feat. Rick Ross)</p>
-            <span>lill Wayne</span>
-          </div>
-          <span>4:46</span>
-        </div>
-      </li>
-      <li>
-        <img
-          src="https://s.yimg.com/ny/api/res/1.2/b5tX9UCX8LjiD09LCDfMeA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media.zenfs.com/en-US/rollingstone.com/3dd7ffdb4327a801d1bf8a814feaadc1"
-          alt="Autor"
-        />
-        <div>
-          <div>
-            <p>John (feat. Rick Ross)</p>
-            <span>lill Wayne</span>
-          </div>
-          <span>4:46</span>
-        </div>
-      </li>
-      <li>
-        <img
-          src="https://s.yimg.com/ny/api/res/1.2/b5tX9UCX8LjiD09LCDfMeA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media.zenfs.com/en-US/rollingstone.com/3dd7ffdb4327a801d1bf8a814feaadc1"
-          alt="Autor"
-        />
-        <div>
-          <div>
-            <p>John (feat. Rick Ross)</p>
-            <span>lill Wayne</span>
-          </div>
-          <span>4:46</span>
-        </div>
-      </li>
-      <li>
-        <img
-          src="https://s.yimg.com/ny/api/res/1.2/b5tX9UCX8LjiD09LCDfMeA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media.zenfs.com/en-US/rollingstone.com/3dd7ffdb4327a801d1bf8a814feaadc1"
-          alt="Autor"
-        />
-        <div>
-          <div>
-            <p>John (feat. Rick Ross)</p>
-            <span>lill Wayne</span>
-          </div>
-          <span>4:46</span>
-        </div>
-      </li>
-      <li>
-        <img
-          src="https://s.yimg.com/ny/api/res/1.2/b5tX9UCX8LjiD09LCDfMeA--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media.zenfs.com/en-US/rollingstone.com/3dd7ffdb4327a801d1bf8a814feaadc1"
-          alt="Autor"
-        />
-        <div>
-          <div>
-            <p>John (feat. Rick Ross)</p>
-            <span>lill Wayne</span>
-          </div>
-          <span>4:46</span>
-        </div>
-      </li>
+        </li>
+      ))}
     </List>
   );
 }
+
+Playlist.propTypes = {
+  tracks: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      coverUrl: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      artistName: PropTypes.string.isRequired,
+      duration: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};

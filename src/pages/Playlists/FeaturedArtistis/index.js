@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container } from './styles';
 
-export default function Artists() {
+export default function FeaturedArtistis() {
   return (
     <Container>
       <h4>Featured Artistis</h4>

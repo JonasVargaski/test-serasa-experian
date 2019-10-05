@@ -1,0 +1,60 @@
+import styled from 'styled-components';
+import { sizes } from '~/styles/breakpoints';
+
+import Button from '~/components/Button';
+
+export const Container = styled.div`
+  > h3 {
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+    margin: 18px 0 9px;
+  }
+  > div > div + div {
+    @media ${sizes.tablet} {
+      padding-left: 19px;
+
+      span {
+        color: #3a3939;
+      }
+    }
+  }
+`;
+
+export const About = styled.ul`
+  width: 100%;
+
+  > li {
+    border-top: 1px solid #ccc;
+    height: 48px;
+    padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    p {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 12px;
+      color: #888;
+    }
+  }
+`;
+
+export const StyledButton = styled(Button)`
+  margin: 20px 0 17px;
+  display: none;
+
+  @media ${sizes.phone} {
+    display: block;
+  }
+
+  span {
+    font-weight: 600;
+    margin-left: 4px;
+  }
+
+  svg {
+    margin-left: 4px;
+  }
+`;

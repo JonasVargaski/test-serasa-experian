@@ -5,8 +5,12 @@ import Button from '~/components/Button';
 
 export const Container = styled.div`
   max-width: 980px;
-  margin: 27px auto;
+  margin: 0 auto;
   width: 100%;
+
+  > div {
+    margin-top: 31px;
+  }
 `;
 
 export const InfoAlbum = styled.div`
@@ -17,6 +21,8 @@ export const InfoAlbum = styled.div`
   > img {
     max-width: 100%;
     max-height: 100%;
+    width: 100%;
+    height: 100%;
     border-radius: 6px;
   }
 
