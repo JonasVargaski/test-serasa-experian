@@ -12,7 +12,7 @@ export default function Artist() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getCollectionRequest('Kiss'));
+    dispatch(getCollectionRequest('Queen'));
   }, [dispatch]);
 
   const { artist } = useSelector(state => state.artist);

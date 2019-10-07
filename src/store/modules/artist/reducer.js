@@ -6,21 +6,20 @@ const INITIAL_STATE = {
     amgId: 468749,
     name: 'Queen',
     profileUrl: 'https://music.apple.com/artist/queen/3296287',
-    coverUrl: `https://www.eventim.com.br/obj/media/BR-eventim/campaign/jbj/img/photo-bonjovi-001.jpg`,
+    coverUrl: `https://i.ytimg.com/vi/_Uu12zY01ts/maxresdefault.jpg`,
     about: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Beatae aspernatur aperiam nihil fugiat delectus eos molestias,
             provident itaque est numquam ut autem deleniti sed maxime vero
             sunt ipsam quibusdam sequi.`,
-    origin: 'Alabana',
-    genre: 'Rock',
-    born: 'Sep, 27 2000',
+    origin: 'Test',
+    genre: 'Rock, Pop',
+    born: 'Sep, 27 2002',
     collections: [],
     featuredArtistis: [
       {
         id: 151502,
-        imageUrl:
-          'https://cdn-ofuxico.akamaized.net/img/upload/noticias/2017/07/20/maluma-prepara-lancamento-de-disco-em-ingles-1_298811_36.jpg',
-        name: 'Lil Wayne',
+        imageUrl: 'https://i.ytimg.com/vi/3p4MZJsexEs/hqdefault.jpg',
+        name: 'Test',
         genre: 'Rock',
       },
     ],
