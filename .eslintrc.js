@@ -1,35 +1,10 @@
 module.exports = {
   env: {
-    browser: true,
-    es6: true,
-  },
-  extends: [
-    'airbnb',
-  ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 2018,
-    sourceType: 'module',
-  },
-  plugins: [
-    'react',
-  ],
-  rules: {
-  },
-};
-module.exports = {
-  env: {
     es6: true,
     jest: true,
     browser: true
   },
-  extends: ["airbnb", "prettier", "prettier/react"],
+  extends: ["airbnb", "prettier", "prettier/react", "plugin:flowtype/recommended"],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly",
@@ -42,7 +17,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module"
   },
-  plugins: ["react", "jsx-a11y", "import", "react-hooks", "prettier"],
+  plugins: ["react", "jsx-a11y", "import", "react-hooks", "prettier", "flowtype"],
   rules: {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
@@ -64,5 +39,8 @@ module.exports = {
         rootPathSuffix: "src"
       },
     },
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
   },
 };
