@@ -5,15 +5,15 @@ import api from '~/services/api';
 
 import { getCollectionFailure, getCollectionSuccess } from './actions';
 
-export function* getCollectionRequest({ payload: { artistName } }) {
+export function* getCollectionRequest({ payload: { artist, limit } }) {
   try {
-    const queryName = String(artistName)
+    const queryName = String(artist)
       .trim()
       .replace(/( )+/gi, '+');
 
     const responseCollections = yield call(
       api.get,
-      `search?term=${queryName}&entity=album&limit=3`
+      `search?term=${queryName}&entity=album&limit=${limit}`
     );
 
     const collectionsIds = responseCollections.data.results.map(

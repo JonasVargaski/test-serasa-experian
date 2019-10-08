@@ -1,7 +1,7 @@
-export function getCollectionRequest(artistName) {
+export function getCollectionRequest(data) {
   return {
     type: '@artist/GET_COLLECTION_REQUEST',
-    payload: { artistName },
+    payload: data,
   };
 }
 

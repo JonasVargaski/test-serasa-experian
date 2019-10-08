@@ -8,7 +8,7 @@ export const Cover = styled.div`
   background: ${({ imageUrl }) => `url('${imageUrl}')`};
   width: 100%;
   height: 250px;
-  background-size: 100% 250px;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 `;
 
