@@ -8,7 +8,7 @@
 - Immer, axios, outras;
 
 ------------
-######Instalação de depêndencias
+###### Instalação de depêndencias
 Executar no terminal os comandos abaixo:
 
  `$ npm install`
